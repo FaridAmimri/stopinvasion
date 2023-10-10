@@ -1,15 +1,17 @@
 /** @format */
 
 import { useState } from 'react'
+import { MenuType, MenuItemType } from '../types/types'
+import { Link } from 'react-router-dom'
+
+const menu: MenuType = [
+  { id: 1, name: 'Home', link: '/' },
+  { id: 2, name: 'Services', link: '/services' },
+  { id: 3, name: 'About us', link: '/about' },
+  { id: 4, name: 'Contact', link: '/contact' }
+]
 
 const Header = () => {
-  const menu = [
-    { id: 1, name: 'Home' },
-    { id: 2, name: 'Services' },
-    { id: 3, name: 'About us' },
-    { id: 4, name: 'Contact' }
-  ]
-
   const [activeMenu, setActiveMenu] = useState('Home')
 
   return (
@@ -19,17 +21,20 @@ const Header = () => {
         {menu.map((item) => {
           const isActive = item.name == activeMenu
           const textClass = `text-lg cursor-pointer ${
-            isActive ? 'text-sky-500' : ''
+            isActive ? 'text-sky-500' : 'text-black'
           }`
+          const handleClick = (item: MenuItemType) => {
+            setActiveMenu(item.name)
+          }
           return (
-            <div key={item.id}>
-              <div
-                className={textClass}
-                onClick={() => setActiveMenu(item.name)}
-              >
-                {item.name}
-              </div>
-            </div>
+            <Link
+              key={item.id}
+              className={textClass}
+              onClick={() => handleClick(item)}
+              to={item.link}
+            >
+              {item.name}
+            </Link>
           )
         })}
       </div>
