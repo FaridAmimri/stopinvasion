@@ -16,7 +16,7 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home')
 
   return (
-    <div className='flex items-center p-6 w-screen justify-between'>
+    <div className='flex items-center p-8 w-screen justify-between'>
       {/* Logo */}
       <div className='flex items-center'>
         <svg
@@ -37,7 +37,7 @@ const Header = () => {
       </div>
 
       {/* Links */}
-      <div className='hidden md:flex gap-16'>
+      <div className='hidden md:flex gap-12'>
         {menu.map((item) => {
           const isActive = item.name == activeMenu
           const textClass = `text-lg cursor-pointer ${
