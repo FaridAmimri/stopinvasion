@@ -20,7 +20,7 @@ const CallToAction = () => {
         <div className='bg-white absolute bottom-[0px] left-[-22px] rotate-45 h-2 w-32' />
       </div>
       <div className='text-center md:hidden'>
-        <button className='w-40 bg-yellow-500 rounded p-2 px-6 text-white transition duration-150 ease-in-out'>
+        <button className='w-40 bg-yellow-500 rounded p-2 px-6 text-white'>
           Contact us
         </button>
       </div>

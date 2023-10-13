@@ -1,22 +1,16 @@
 /** @format */
 
 import { useState } from 'react'
-import { MenuType, MenuItemType } from '../types/types'
+import { MenuItemType } from '../types/types'
 import { Link } from 'react-router-dom'
+import { menu } from '../utils/data'
 import Menu from './Menu'
-
-const menu: MenuType = [
-  { id: 1, name: 'Home', link: '/' },
-  { id: 2, name: 'Services', link: '/services' },
-  { id: 3, name: 'About us', link: '/about' },
-  { id: 4, name: 'Contact', link: '/contact' }
-]
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home')
 
   return (
-    <div className='flex items-center p-8 w-screen justify-between'>
+    <div className='flex items-center p-8 justify-between'>
       {/* Logo */}
       <div className='flex items-center'>
         <svg

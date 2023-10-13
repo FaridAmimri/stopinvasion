@@ -5,14 +5,14 @@ import { menu } from '../utils/data'
 
 const Footer = () => {
   return (
-    <div className='h-screen flex flex-col justify-between p-8 bg-slate-800 text-white'>
-      <div className='flex flex-1 flex-col lg:flex-row lg:items-center'>
+    <div className='h-screen flex flex-col justify-between p-8 bg-slate-800 text-white md:h-auto md:gap-10 2xl:h-1/2'>
+      <div className='flex flex-1 flex-col lg:flex-row lg:items-center md:gap-10'>
         <div className='flex flex-col gap-4 lg:gap-12'>
           <h1 className='text-4xl font-bold '>StopInvasion</h1>
           <span className='text-2xl font-semibold'>
             Meet The Best Cleaning Services
           </span>
-          <div className=''>
+          <div className='flex flex-col gap-2'>
             <p className='text-lg text-slate-300'>
               Karanglewas, Melbern Ausi 45745
             </p>
@@ -20,11 +20,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex-1 flex flex-col justify-around text-lg lg:flex-row'>
+        <div className='flex-1 flex flex-col justify-around text-lg md:gap-10 lg:flex-row'>
           <ul className='flex flex-wrap lg:flex-col'>
             {menu.map((item) => (
               <li key={item.id}>
-                <Link className='pr-5' to={item.link}>
+                <Link className='pr-5 hover:text-sky-500' to={item.link}>
                   {item.name}
                 </Link>
               </li>
@@ -56,7 +56,7 @@ const Footer = () => {
         <span>
           2023 FariDigital
           <br />
-          Allright reserved
+          All right reserved
         </span>
       </div>
     </div>
