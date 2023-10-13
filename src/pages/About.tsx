@@ -1,7 +1,15 @@
 /** @format */
 
+import AboutUs from '../components/AboutUs'
+import CallToAction from '../components/CallToAction'
+
 const About = () => {
-  return <div>About</div>
+  return (
+    <div>
+      <AboutUs />
+      <CallToAction />
+    </div>
+  )
 }
 
 export default About
