@@ -1,7 +1,15 @@
 /** @format */
 
+import Service from '../components/Service'
+import CallToAction from '../components/CallToAction'
+
 const Services = () => {
-  return <div>Services</div>
+  return (
+    <div>
+      <Service />
+      <CallToAction />
+    </div>
+  )
 }
 
 export default Services
