@@ -11,3 +11,17 @@ export type MenuItemType = {
   name: string
   link: string
 }
+
+export type DataType = {
+  id: number
+  img: string
+  title: string
+  desc: string
+}[]
+
+export type DataItemType = {
+  id: number
+  img: string
+  title: string
+  desc: string
+}
