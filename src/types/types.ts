@@ -25,3 +25,11 @@ export type DataItemType = {
   title: string
   desc: string
 }
+
+export type InputType = {
+  name: string
+  subject: string
+  email: string
+  message: string
+}
+
