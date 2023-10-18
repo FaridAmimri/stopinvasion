@@ -46,7 +46,7 @@ const Booking = () => {
   }
 
   return (
-    <div className='p-8 flex flex-col gap-6'>
+    <div className='p-8 flex flex-col gap-6' id='booking'>
       <div className=' flex flex-col gap-2 md:items-center md:py-10'>
         <h1 className='text-4xl font-bold lg:w-1/2 lg:text-center'>
           Prenez un rdv pour un devis

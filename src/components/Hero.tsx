@@ -13,8 +13,9 @@ const Hero = () => {
         </span>
         <div className='flex justify-between text-lg md:w-2/3'>
           <button className='w-40 bg-yellow-500 rounded p-2 px-6 text-white'>
-            Book now
+            <a href='#booking'>Book now</a>
           </button>
+
           <button className='w-40 border-sky-500 border-2 rounded p-2 px-6 text-sky-500'>
             Contact us
           </button>

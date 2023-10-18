@@ -1,5 +1,6 @@
 /** @format */
 
+import { Link } from 'react-router-dom'
 import { DataType } from '../types/types'
 import ServiceItem from './ServiceItem'
 
@@ -38,9 +39,9 @@ const Service = () => {
           services professionnels pour éliminer les nuisibles et assurer un
           environnement sain
         </span>
-        <div className='flex items-center md:hidden'>
+        <div className='flex items-center'>
           <button className='w-40 bg-yellow-500 rounded p-4 text-white md:px-6 md:p-2'>
-            En savoir plus
+            <Link to='/about'>En savoir plus</Link>
           </button>
         </div>
       </div>
