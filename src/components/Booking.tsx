@@ -1,6 +1,50 @@
 /** @format */
+import { useState } from 'react'
+import { RequestType } from '../types/types'
+
+const initialValues: RequestType = {
+  name: '',
+  email: '',
+  service: ''
+}
 
 const Booking = () => {
+  const [values, setValues] = useState(initialValues)
+
+  const handleInput = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setValues({ ...values, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const body =
+      'Demande de devis pour: ' +
+      values.name +
+      '<br/> Email: ' +
+      values.email +
+      '<br/> Type de service: ' +
+      values.service
+
+    const config = {
+      SecureToken: 'a5af7959-c6ac-478f-ac4d-fe76997cb581',
+      To: 'stopinvasion59@gmail.com',
+      From: 'stopinvasion59@gmail.com',
+      Subject: 'Demande de devis',
+      Body: body
+    }
+
+    if (window.Email) {
+      await window.Email.send(config).then(() =>
+        alert('Request sent successfully')
+      )
+    }
+  }
+
   return (
     <div className='p-8 flex flex-col gap-6'>
       <div className=' flex flex-col gap-2 md:items-center md:py-10'>
@@ -12,12 +56,17 @@ const Booking = () => {
         </p>
       </div>
 
-      <form className='ring-1 ring-gray-300 p-4 flex flex-col gap-4 md:mb-10 lg:flex-row lg:gap-6'>
+      <form
+        className='ring-1 ring-gray-300 p-4 flex flex-col gap-4 md:mb-10 lg:flex-row lg:gap-6'
+        onSubmit={handleSubmit}
+      >
         <div className='flex flex-col gap-2 lg:flex-1'>
           <label>Name</label>
           <input
             type='text'
             name='name'
+            value={values.name}
+            onChange={handleInput}
             className='ring-1 ring-sky-300 p-2 rounded-sm'
           />
         </div>
@@ -26,13 +75,20 @@ const Booking = () => {
           <input
             type='text'
             name='email'
+            value={values.email}
+            onChange={handleInput}
             className='ring-1 ring-sky-300 p-2 rounded-sm'
           />
         </div>
 
         <div className='flex flex-col gap-2 lg:flex-1'>
           <label>Services</label>
-          <select className='w-20' name='service'>
+          <select
+            className='w-20'
+            name='service'
+            value={values.service}
+            onChange={handleInput}
+          >
             <option value='Home' className='ring-1 ring-sky-300 p-2'>
               Home
             </option>

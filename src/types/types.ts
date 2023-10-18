@@ -26,10 +26,16 @@ export type DataItemType = {
   desc: string
 }
 
-export type InputType = {
+export type FormType = {
   name: string
   subject: string
   email: string
   message: string
+}
+
+export type RequestType = {
+  name: string
+  email: string
+  service: string
 }
 

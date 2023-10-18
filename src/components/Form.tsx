@@ -1,10 +1,10 @@
 /** @format */
 
 import { useState } from 'react'
-import { InputType } from '../types/types'
+import { FormType } from '../types/types'
 import { useNavigate } from 'react-router-dom'
 
-const initialValues: InputType = {
+const initialValues: FormType = {
   name: '',
   subject: '',
   email: '',
@@ -66,7 +66,7 @@ const Form = () => {
             name='name'
             value={formState.name}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm'
+            className='ring-1 ring-sky-300 p-2 rounded-sm focus:ring-yellow-500'
           />
         </div>
         <div className='flex flex-col gap-2'>
