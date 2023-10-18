@@ -49,10 +49,10 @@ const Booking = () => {
     <div className='p-8 flex flex-col gap-6'>
       <div className=' flex flex-col gap-2 md:items-center md:py-10'>
         <h1 className='text-4xl font-bold lg:w-1/2 lg:text-center'>
-          Request a cleaning estimate today
+          Prenez un rdv pour un devis
         </h1>
         <p className='text-lg font-bold'>
-          <span className='text-sky-500'>Call us: </span> +33 6 52 15 65 75{' '}
+          <span className='text-sky-500'>Réponse sous 24h </span>
         </p>
       </div>
 
@@ -61,7 +61,7 @@ const Booking = () => {
         onSubmit={handleSubmit}
       >
         <div className='flex flex-col gap-2 lg:flex-1'>
-          <label>Name</label>
+          <label>Nom</label>
           <input
             type='text'
             name='name'
@@ -89,11 +89,11 @@ const Booking = () => {
             value={values.service}
             onChange={handleInput}
           >
-            <option value='Home' className='ring-1 ring-sky-300 p-2'>
-              Home
+            <option value='Maison' className='ring-1 ring-sky-300 p-2'>
+              Maison
             </option>
-            <option value='Office'>Office</option>
-            <option value='Vehicle'>Vehicle</option>
+            <option value='Bureau'>Bureau</option>
+            <option value='Véhicule'>Véhicule</option>
           </select>
         </div>
 
@@ -102,7 +102,7 @@ const Booking = () => {
             type='submit'
             className='w-36 bg-yellow-500 rounded p-3 text-white'
           >
-            Estimate
+            Estimer
           </button>
         </div>
       </form>

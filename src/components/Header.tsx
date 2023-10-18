@@ -48,7 +48,7 @@ const Header = () => {
       {/* Book Button */}
       <div className='hidden md:flex '>
         <button className='bg-yellow-500 rounded p-2 px-6 text-white'>
-          Book now
+          Agrément N°7483838
         </button>
       </div>
     </div>
