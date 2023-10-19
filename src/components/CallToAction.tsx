@@ -1,5 +1,7 @@
 /** @format */
 
+import { Link } from 'react-router-dom'
+
 const CallToAction = () => {
   return (
     <div className='flex flex-col gap-4 p-8'>
@@ -21,7 +23,7 @@ const CallToAction = () => {
       </div>
       <div className='text-center md:hidden'>
         <button className='w-40 bg-yellow-500 rounded p-2 px-6 text-white'>
-          C'est parti
+          <Link to='/contact'> C'est parti</Link>
         </button>
       </div>
     </div>

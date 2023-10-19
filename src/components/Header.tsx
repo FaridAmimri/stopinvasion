@@ -10,7 +10,7 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home')
 
   return (
-    <div className='flex items-center p-8 justify-between'>
+    <div className='flex items-center p-8 pt-4 justify-between'>
       {/* Logo */}
       <div className='flex items-center'>
         <img src='/logo.png' alt='' width={36} height={36} />
@@ -48,7 +48,7 @@ const Header = () => {
       {/* Book Button */}
       <div className='hidden md:flex '>
         <button className='bg-yellow-500 rounded p-2 px-6 text-white'>
-          Agrément N°7483838
+          Agrément n°054872
         </button>
       </div>
     </div>

@@ -38,7 +38,9 @@ const Booking = () => {
       Body: body
     }
 
+    // @ts-ignore
     if (window.Email) {
+      // @ts-ignore
       await window.Email.send(config).then(() =>
         alert('Request sent successfully')
       )
@@ -67,7 +69,7 @@ const Booking = () => {
             name='name'
             value={values.name}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm'
+            className='border border-sky-500 p-2 rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2 lg:flex-1'>
@@ -77,21 +79,19 @@ const Booking = () => {
             name='email'
             value={values.email}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm'
+            className='border border-sky-500 p-2 rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
 
         <div className='flex flex-col gap-2 lg:flex-1'>
           <label>Services</label>
           <select
-            className='w-20'
+            className='w-24'
             name='service'
             value={values.service}
             onChange={handleInput}
           >
-            <option value='Maison' className='ring-1 ring-sky-300 p-2'>
-              Maison
-            </option>
+            <option value='Maison'>Maison</option>
             <option value='Bureau'>Bureau</option>
             <option value='Véhicule'>Véhicule</option>
           </select>

@@ -45,7 +45,9 @@ const Form = () => {
       Body: body
     }
 
+    // @ts-ignore
     if (window.Email) {
+      // @ts-ignore
       await window.Email.send(config).then(() =>
         alert('email sent successfully')
       )
@@ -66,7 +68,7 @@ const Form = () => {
             name='name'
             value={formState.name}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm focus:ring-yellow-500'
+            className='p-2 border border-sky-500  rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -76,7 +78,7 @@ const Form = () => {
             name='subject'
             value={formState.subject}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm'
+            className='p-2 border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -86,17 +88,17 @@ const Form = () => {
             name='email'
             value={formState.email}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 p-2 rounded-sm'
+            className='p-2 border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
           <label htmlFor=''>Message</label>
           <textarea
-            rows={8}
+            rows={6}
             name='message'
             value={formState.message}
             onChange={handleInput}
-            className='ring-1 ring-sky-300 rounded-sm'
+            className='border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
           />
         </div>
         <div className=''>

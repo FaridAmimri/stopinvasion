@@ -2,7 +2,7 @@
 
 const AboutUs = () => {
   return (
-    <div className='p-8 flex flex-col gap-6'>
+    <div className='p-8 pt-0 flex flex-col gap-6'>
       <div className='flex flex-col gap-8 text-lg'>
         <div className='flex flex-col gap-2'>
           <h3 className='text-xl font-bold text-sky-500'>Qui sommes nous ?</h3>
@@ -59,9 +59,7 @@ const AboutUs = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>
-            Notre Approche Chez StopInvasion
-          </h3>
+          <h3 className='text-xl font-bold text-sky-500'>Notre Approche</h3>
           <p>
             Nous croyons en une approche respectueuse de l'environnement pour la
             gestion des nuisibles. Nous utilisons des méthodes durables et des
