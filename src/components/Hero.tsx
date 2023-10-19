@@ -25,7 +25,11 @@ const Hero = () => {
       </div>
 
       <div className='flex-1 overflow-hidden'>
-        <img src='/cleaning.png' className='object-cover' />
+        <img
+          src='/cleaning.png'
+          alt='nettoyage et éradication'
+          className='object-cover'
+        />
       </div>
     </div>
   )

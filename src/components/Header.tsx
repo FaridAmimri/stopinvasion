@@ -13,7 +13,12 @@ const Header = () => {
     <div className='flex items-center p-8 pt-4 justify-between'>
       {/* Logo */}
       <div className='flex items-center'>
-        <img src='/logo.png' alt='' width={36} height={36} />
+        <img
+          src='/logo.png'
+          alt='nettoyage et désinfection'
+          width={36}
+          height={36}
+        />
         <span className='text-xl font-bold pl-1'>StopInvasion</span>
       </div>
 

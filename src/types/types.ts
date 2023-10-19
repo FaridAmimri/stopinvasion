@@ -12,14 +12,14 @@ export type MenuItemType = {
   link: string
 }
 
-export type DataType = {
+export type ServiceType = {
   id: number
   img: string
   title: string
   desc: string
 }[]
 
-export type DataItemType = {
+export type ServiceItemType = {
   id: number
   img: string
   title: string

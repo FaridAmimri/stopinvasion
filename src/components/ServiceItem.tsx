@@ -1,11 +1,11 @@
 /** @format */
-import { DataItemType } from '../types/types'
+import { ServiceItemType } from '../types/types'
 
-const ServiceItem = ({ data }: { data: DataItemType }) => {
+const ServiceItem = ({ data }: { data: ServiceItemType }) => {
   return (
     <div className='flex flex-col gap-3 w-2/3 md:items-center'>
       <div className=''>
-        <img src={data.img} width={66} height={66} />
+        <img src={data.img} alt={data.title} width={66} height={66} />
       </div>
       <div className='text-xl font-bold md:w-1/2 md:text-center'>
         <h2>{data.title}</h2>

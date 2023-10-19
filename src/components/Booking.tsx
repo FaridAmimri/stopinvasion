@@ -19,7 +19,7 @@ const Booking = () => {
     setValues({ ...values, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const body =
@@ -38,12 +38,8 @@ const Booking = () => {
       Body: body
     }
 
-    // @ts-ignore
     if (window.Email) {
-      // @ts-ignore
-      await window.Email.send(config).then(() =>
-        alert('Request sent successfully')
-      )
+      window.Email.send(config).then(() => alert('Request sent successfully'))
     }
   }
 

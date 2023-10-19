@@ -1,29 +1,8 @@
 /** @format */
 
 import { Link } from 'react-router-dom'
-import { DataType } from '../types/types'
+import { service } from '../utils/data'
 import ServiceItem from './ServiceItem'
-
-const data: DataType = [
-  {
-    id: 1,
-    img: '/house.png',
-    title: 'Maison Personnelle',
-    desc: 'Environnement propre, sûr et sain pour votre maison'
-  },
-  {
-    id: 2,
-    img: '/office.png',
-    title: 'Immobiler de Bureau',
-    desc: 'Propreté de vos bureaux, salles de réunion et espaces communs'
-  },
-  {
-    id: 3,
-    img: '/vehicle.png',
-    title: 'Véhicule de Transport',
-    desc: 'Nettoyage et de désinfection intérieure et extérieure'
-  }
-]
 
 const Service = () => {
   return (
@@ -47,8 +26,8 @@ const Service = () => {
       </div>
 
       <div className='flex flex-col gap-8 md:flex-row md:items-center md:gap-14'>
-        {data.map((dataItem) => (
-          <ServiceItem key={dataItem.id} data={dataItem} />
+        {service.map((serviceItem) => (
+          <ServiceItem key={serviceItem.id} data={serviceItem} />
         ))}
       </div>
     </div>
