@@ -25,7 +25,7 @@ const Header = () => {
       {/* Links */}
       <div className='hidden md:flex gap-12'>
         {menu.map((item) => {
-          const isActive = item.name == activeMenu
+          const isActive = item.name === activeMenu
           const textClass = `text-lg cursor-pointer ${
             isActive ? 'text-sky-500' : 'text-black'
           }`
@@ -50,7 +50,7 @@ const Header = () => {
         <Menu />
       </div>
 
-      {/* Book Button */}
+      {/* Agreement */}
       <div className='hidden md:flex '>
         <button className='bg-yellow-500 rounded p-2 px-6 text-white'>
           Agrément n°054872
