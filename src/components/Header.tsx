@@ -1,33 +1,42 @@
 /** @format */
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { MenuItemType } from '../types/types'
-import { Link } from 'react-router-dom'
 import { menu } from '../utils/data'
 import Menu from './Menu'
 
 const Header = () => {
-  const [activeMenu, setActiveMenu] = useState('Home')
+  const location = useLocation()
+  const activeLink = location.pathname.substring(1)
+
+  const [activeMenu, setActiveMenu] = useState('home')
+
+  useEffect(() => {
+    setActiveMenu(activeLink)
+  }, [activeLink])
 
   return (
     <div className='flex items-center p-8 pt-4 justify-between'>
       {/* Logo */}
-      <div className='flex items-center'>
+      <Link to='/accueil' className='flex items-center'>
         <img
           src='/logo.png'
           alt='nettoyage et désinfection'
           width={36}
           height={36}
+          className='bg-slate-400 rounded-full'
         />
         <span className='text-xl font-bold pl-1'>StopInvasion</span>
-      </div>
+      </Link>
 
       {/* Links */}
       <div className='hidden md:flex gap-12'>
         {menu.map((item) => {
-          const isActive = item.name === activeMenu
+          const isActive =
+            item.name.replace(' ', '').toLowerCase() === activeMenu
           const textClass = `text-lg cursor-pointer ${
-            isActive ? 'text-sky-500' : 'text-black'
+            isActive ? 'text-green-500' : 'text-black'
           }`
           const handleClick = (item: MenuItemType) => {
             setActiveMenu(item.name)

@@ -3,9 +3,9 @@
 import { MenuType, ServiceType } from '../types/types'
 
 export const menu: MenuType = [
-  { id: 1, name: 'Home', link: '/' },
+  { id: 1, name: 'Accueil', link: '/accueil' },
   { id: 2, name: 'Services', link: '/services' },
-  { id: 3, name: 'À Propos', link: '/about' },
+  { id: 3, name: 'Notre Entreprise', link: '/notreentreprise' },
   { id: 4, name: 'Contact', link: '/contact' }
 ]
 
