@@ -11,6 +11,7 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 import { hero } from '@/utils/data'
+import { Button } from './ui/button'
 
 const Hero = () => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
@@ -25,13 +26,13 @@ const Hero = () => {
           Le chimique ce n'est pas automatique
         </span>
         <div className='flex justify-between text-lg md:w-2/3'>
-          <button className='w-30 bg-green-500 rounded p-2 px-6 text-white md:w-40'>
-            <a href='#booking'>Estimer</a>
-          </button>
+          <Button className='w-32 bg-green-500 hover:bg-red-500 rounded p-2 px-6 text-white md:w-40'>
+            <Link to='#booking'>Estimer</Link>
+          </Button>
 
-          <button className='w-30 border-red-500 border-2 rounded p-2 px-6 md:w-40'>
+          <Button className='w-32 bg-black hover:bg-red-500 text-white rounded p-2 px-6 md:w-40'>
             <Link to='/contact'>Contacter</Link>
-          </button>
+          </Button>
         </div>
       </div>
 

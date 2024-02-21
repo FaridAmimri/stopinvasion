@@ -1,6 +1,7 @@
 /** @format */
 import { useState } from 'react'
 import { RequestType } from '../types/types'
+import { Button } from './ui/button'
 
 const initialValues: RequestType = {
   name: '',
@@ -50,7 +51,7 @@ const Booking = () => {
           Prenez un rdv pour un devis
         </h1>
         <p className='text-lg font-bold'>
-          <span className='text-sky-500'>Réponse sous 24h </span>
+          <span className='text-green-500'>Réponse sous 24h </span>
         </p>
       </div>
 
@@ -65,7 +66,7 @@ const Booking = () => {
             name='name'
             value={values.name}
             onChange={handleInput}
-            className='border border-sky-500 p-2 rounded-sm focus:border-yellow-500 outline-none'
+            className='border border-green-500 p-2 rounded-sm focus:border-red-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2 lg:flex-1'>
@@ -75,7 +76,7 @@ const Booking = () => {
             name='email'
             value={values.email}
             onChange={handleInput}
-            className='border border-sky-500 p-2 rounded-sm focus:border-yellow-500 outline-none'
+            className='border border-green-500 p-2 rounded-sm focus:border-red-500 outline-none'
           />
         </div>
 
@@ -89,17 +90,22 @@ const Booking = () => {
           >
             <option value='Maison'>Maison</option>
             <option value='Bureau'>Bureau</option>
+            <option value='Immeuble'>Immeuble</option>
+            <option value='Commerce'>Commerce</option>
+            <option value='Agence Immobilière'>Agence Immobilière</option>
+            <option value='Bailleur'>Bailleur</option>
+            <option value='Partenaire'>Partenaire</option>
             <option value='Véhicule'>Véhicule</option>
           </select>
         </div>
 
         <div className='lg:flex lg:items-center'>
-          <button
+          <Button
             type='submit'
-            className='w-36 bg-yellow-500 rounded p-3 text-white'
+            className='w-36 bg-green-500 hover:bg-red-500 rounded p-3 text-white'
           >
             Estimer
-          </button>
+          </Button>
         </div>
       </form>
     </div>
