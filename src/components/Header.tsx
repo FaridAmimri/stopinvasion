@@ -25,7 +25,6 @@ const Header = () => {
           alt='nettoyage et désinfection'
           width={36}
           height={36}
-          className='bg-slate-400 rounded-full'
         />
         <span className='text-xl font-bold pl-1'>StopInvasion</span>
       </Link>
@@ -61,7 +60,7 @@ const Header = () => {
 
       {/* Agreement */}
       <div className='hidden md:flex '>
-        <button className='bg-yellow-500 rounded p-2 px-6 text-white'>
+        <button className='bg-green-500 rounded p-2 px-6 text-white'>
           Agrément n°054872
         </button>
       </div>

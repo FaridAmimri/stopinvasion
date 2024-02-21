@@ -26,6 +26,18 @@ export type ServiceItemType = {
   desc: string
 }
 
+export type HeroType = {
+  id: number
+  title: string
+  img: string
+}[]
+
+export type HeroItemType = {
+  id: number
+  title: string
+  img: string
+}
+
 export type FormType = {
   name: string
   subject: string
