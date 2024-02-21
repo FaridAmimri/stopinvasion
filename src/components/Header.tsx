@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { MenuItemType } from '../types/types'
 import { menu } from '../utils/data'
 import Menu from './Menu'
+import { Button } from './ui/button'
 
 const Header = () => {
   const location = useLocation()
@@ -17,7 +18,7 @@ const Header = () => {
   }, [activeLink])
 
   return (
-    <div className='flex items-center p-8 pt-4 justify-between'>
+    <header className='flex items-center p-8 pt-4 justify-between'>
       {/* Logo */}
       <Link to='/accueil' className='flex items-center'>
         <img
@@ -60,11 +61,11 @@ const Header = () => {
 
       {/* Agreement */}
       <div className='hidden md:flex '>
-        <button className='bg-green-500 rounded p-2 px-6 text-white'>
+        <Button disabled className='bg-green-500 rounded p-2 px-6 text-white'>
           Agrément n°054872
-        </button>
+        </Button>
       </div>
-    </div>
+    </header>
   )
 }
 
