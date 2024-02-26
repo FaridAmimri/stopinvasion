@@ -5,18 +5,21 @@ const AboutUs = () => {
     <div className='p-8 pt-0 flex flex-col gap-6'>
       <div className='flex flex-col gap-8 text-lg'>
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>Qui sommes nous ?</h3>
+          <h3 className='text-xl font-bold text-green-500'>
+            Qui sommes nous ?
+          </h3>
           <p>
-            Bienvenue sur la page "À Propos" de notre entreprise spécialisée
-            dans la gestion des nuisibles ! Nous sommes fiers de vous présenter
-            nos services dédiés à la résolution des problèmes liés aux parasites
-            et aux nuisibles, notamment le nettoyage des punaises de lit, la
-            dératisation et le nettoyage des nids d'abeilles.
+            Bienvenue sur la page de présentation de notre entreprise
+            spécialisée dans la gestion des nuisibles ! Nous sommes fiers de
+            vous présenter nos services dédiés à la résolution des problèmes
+            liés aux parasites et aux nuisibles, notamment le nettoyage des
+            punaises de lit, la dératisation et le nettoyage des nids
+            d'abeilles.
           </p>
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>Notre Mission</h3>
+          <h3 className='text-xl font-bold text-green-500'>Notre Mission</h3>
           <p>
             Chez StopInvasion, notre mission principale est de vous offrir un
             environnement sûr et sain, en éliminant efficacement et de manière
@@ -29,7 +32,7 @@ const AboutUs = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>Nos Prestations</h3>
+          <h3 className='text-xl font-bold text-green-500'>Nos Prestations</h3>
           <ul className='flex flex-col gap-3'>
             <li>
               <b>1 - Nettoyage des Punaises de Lit : </b> Les punaises de lit
@@ -59,7 +62,7 @@ const AboutUs = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>Notre Approche</h3>
+          <h3 className='text-xl font-bold text-green-500'>Notre Approche</h3>
           <p>
             Nous croyons en une approche respectueuse de l'environnement pour la
             gestion des nuisibles. Nous utilisons des méthodes durables et des
@@ -71,7 +74,7 @@ const AboutUs = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h3 className='text-xl font-bold text-sky-500'>
+          <h3 className='text-xl font-bold text-green-500'>
             Pourquoi Nous Choisir ?
           </h3>
           <ul className='flex flex-col gap-2'>
