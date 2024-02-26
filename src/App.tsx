@@ -10,13 +10,14 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div>
+    <div className='max-width'>
       <Router>
         <Header />
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/accueil' element={<Home />} />
           <Route path='/services' element={<Services />} />
-          <Route path='/Notreentreprise' element={<About />} />
+          <Route path='/notreentreprise' element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
