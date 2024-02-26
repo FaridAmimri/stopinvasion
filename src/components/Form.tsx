@@ -57,7 +57,7 @@ const Form = () => {
 
   return (
     <div className='md:w-2/4'>
-      <h1 className='text-xl font-bold pb-4 text-sky-500'>
+      <h1 className='text-xl font-bold pb-4 text-green-500'>
         Entrons en contact
       </h1>
       <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
@@ -68,7 +68,7 @@ const Form = () => {
             name='name'
             value={formState.name}
             onChange={handleInput}
-            className='p-2 border border-sky-500  rounded-sm focus:border-yellow-500 outline-none'
+            className='p-2 border border-green-500  rounded-sm focus:border-red-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -78,7 +78,7 @@ const Form = () => {
             name='subject'
             value={formState.subject}
             onChange={handleInput}
-            className='p-2 border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
+            className='p-2 border border-green-500 rounded-sm focus:border-red-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -88,7 +88,7 @@ const Form = () => {
             name='email'
             value={formState.email}
             onChange={handleInput}
-            className='p-2 border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
+            className='p-2 border border-green-500 rounded-sm focus:border-red-500 outline-none'
           />
         </div>
         <div className='flex flex-col gap-2'>
@@ -98,13 +98,13 @@ const Form = () => {
             name='message'
             value={formState.message}
             onChange={handleInput}
-            className='border border-sky-500 rounded-sm focus:border-yellow-500 outline-none'
+            className='border border-green-500 rounded-sm focus:border-red-500 outline-none'
           />
         </div>
         <div className=''>
           <button
             type='submit'
-            className='w-36 bg-yellow-500 rounded p-3 text-white'
+            className='w-36 bg-green-500 hover:bg-red-400 rounded p-3 text-white'
           >
             Envoyer
           </button>
