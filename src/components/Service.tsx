@@ -3,6 +3,7 @@
 import { Link } from 'react-router-dom'
 import { service } from '../utils/data'
 import ServiceItem from './ServiceItem'
+import { Button } from './ui/button'
 
 const Service = () => {
   return (
@@ -11,21 +12,21 @@ const Service = () => {
         <h1 className='text-5xl font-bold md:text-3xl '>
           Les meilleurs services que nous vous proposons
         </h1>
-        <span className='text-lg text-gray-400 font-semibold'>
+        <span className='text-lg text-gray-400 text-justify font-semibold'>
           Nous comprenons que la propreté et la sécurité de votre environnement
           sont essentielles pour votre bien-être et celui de vos proches. C'est
           pourquoi nous mettons à votre disposition une gamme complète de
           services professionnels pour éliminer les nuisibles et assurer un
-          environnement sain
+          environnement sain.
         </span>
         <div className='flex items-center'>
-          <button className='w-40 bg-yellow-500 rounded p-4 text-white md:px-6 md:p-2'>
-            <Link to='/about'>En savoir plus</Link>
-          </button>
+          <Button className='w-40 bg-green-500 rounded p-4 text-white md:px-6 md:p-2'>
+            <Link to='/notreentreprise'>En savoir plus</Link>
+          </Button>
         </div>
       </div>
 
-      <div className='flex flex-col gap-8 md:flex-row md:items-center md:gap-14'>
+      <div className='flex gap-8 md:flex-wrap md:justify-between md:gap-14'>
         {service.map((serviceItem) => (
           <ServiceItem key={serviceItem.id} data={serviceItem} />
         ))}
