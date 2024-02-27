@@ -61,7 +61,7 @@ const Header = () => {
 
       {/* Agreement */}
       <div className='hidden md:flex '>
-        <Button disabled className='bg-green-500 rounded p-2 px-6 text-white'>
+        <Button className='bg-green-400 rounded p-2 px-6 text-white'>
           Agrément n°054872
         </Button>
       </div>
