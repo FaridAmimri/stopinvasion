@@ -5,9 +5,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const links = [
-  { id: 1, title: 'Home', url: '/' },
+  { id: 1, title: 'Accueil', url: '/accueil' },
   { id: 2, title: 'Services', url: '/services' },
-  { id: 3, title: 'About us', url: '/about' },
+  { id: 3, title: 'Notre entreprise', url: '/notreentreprise' },
   { id: 4, title: 'Contact', url: '/contact' }
 ]
 
@@ -52,7 +52,7 @@ const Menu = () => {
         </div>
       )}
       {open && (
-        <div className='bg-sky-500 text-white absolute left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col justify-center items-center gap-8 text-3xl z-10'>
+        <div className='bg-green-500 text-white absolute left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col justify-center items-center gap-8 text-3xl z-10 transition-all ease-in-out'>
           {links.map((item) => (
             <Link to={item.url} key={item.id} onClick={() => setOpen(false)}>
               {item.title}
