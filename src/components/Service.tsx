@@ -26,7 +26,7 @@ const Service = () => {
         </div>
       </div>
 
-      <div className='flex gap-8 md:flex-wrap md:justify-between md:gap-14'>
+      <div className='flex flex-col md:flex-row md:flex-wrap items-center gap-8 md:gap-14 md:justify-between'>
         {service.map((serviceItem) => (
           <ServiceItem key={serviceItem.id} data={serviceItem} />
         ))}
