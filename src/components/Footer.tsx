@@ -21,7 +21,8 @@ const Footer = () => {
           </div>
 
           <span className='text-2xl font-semibold'>
-            Désinfection, Dératisation et Désinsectisation
+            Désinfection, <span className='text-green-500'>Dératisation</span>{' '}
+            et <span className='text-red-500'>Désinsectisation</span>
           </span>
 
           <div className='flex flex-col gap-2'>
@@ -57,7 +58,7 @@ const Footer = () => {
 
           <div className='flex justify-between'>
             <div className='mr-8'>
-              <h6 className='text-green-500 pb-2'>Suivez-nous</h6>
+              <h6 className='text-green-500 text-center pb-2'>Suivez-nous</h6>
               <ul className='leading-10 text-base'>
                 <li className='flex items-center gap-1'>
                   <svg
