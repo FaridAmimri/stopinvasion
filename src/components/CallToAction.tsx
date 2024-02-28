@@ -15,17 +15,20 @@ const CallToAction = () => {
           conformément à l'article 142 loi ELan
         </span>
         <div className='hidden md:flex md:justify-center'>
-          <Button className='w-40 bg-black rounded p-4 px-6 text-white transition duration-150 ease-in-out'>
+          <Link
+            to='/contact'
+            className='w-40 h-10 flex justify-center items-center bg-black rounded p-4 px-6 text-white'
+          >
             C'est parti
-          </Button>
+          </Link>
         </div>
         <div className='bg-white absolute top-[0px] right-[-22px] rotate-45 h-2 w-32' />
         <div className='bg-white absolute bottom-[0px] left-[-22px] rotate-45 h-2 w-32' />
       </div>
       <div className='text-center md:hidden'>
-        <button className='w-40 bg-yellow-500 rounded p-2 px-6 text-white'>
+        <Button className='w-40 bg-black rounded p-4 px-6 text-white transition duration-150 ease-in-out'>
           <Link to='/contact'> C'est parti</Link>
-        </button>
+        </Button>
       </div>
     </div>
   )
