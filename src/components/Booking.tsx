@@ -2,15 +2,18 @@
 import { useState } from 'react'
 import { RequestType } from '../types/types'
 import { Button } from './ui/button'
+import { useToast } from '@/components/ui/use-toast'
 
 const initialValues: RequestType = {
   name: '',
   email: '',
-  service: ''
+  service: 'Maison'
 }
 
 const Booking = () => {
   const [values, setValues] = useState(initialValues)
+
+  const { toast } = useToast()
 
   const handleInput = (
     e:
@@ -32,15 +35,32 @@ const Booking = () => {
       values.service
 
     const config = {
-      SecureToken: 'a5af7959-c6ac-478f-ac4d-fe76997cb581',
-      To: 'stopinvasion59@gmail.com',
-      From: 'stopinvasion59@gmail.com',
+      SecureToken: '502c2030-2675-40bf-bf4d-eebf6f64e3cc',
+      To: 'contact@stopinvasion.fr',
+      From: 'contact@stopinvasion.fr',
       Subject: 'Demande de devis',
       Body: body
     }
 
+    // @ts-ignore
     if (window.Email) {
-      window.Email.send(config).then(() => alert('Request sent successfully'))
+      // @ts-ignore
+      window.Email.send(config)
+        .then(
+          () =>
+            toast({
+              title: 'Votre message a bien été envoyé !',
+              description: 'Une réponse vous parviendra sous 24h',
+              variant: 'neutral'
+            }),
+          setValues(initialValues)
+        )
+        .catch(() =>
+          toast({
+            title: `Une erreur s'est produite !`,
+            variant: 'destructive'
+          })
+        )
     }
   }
 

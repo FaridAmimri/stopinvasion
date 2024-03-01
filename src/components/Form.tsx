@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { FormType } from '../types/types'
-import { useNavigate } from 'react-router-dom'
+import { useToast } from '@/components/ui/use-toast'
 
 const initialValues: FormType = {
   name: '',
@@ -14,7 +14,7 @@ const initialValues: FormType = {
 const Form = () => {
   const [formState, setformState] = useState(initialValues)
 
-  const navigate = useNavigate()
+  const { toast } = useToast()
 
   const handleInput = (
     event:
@@ -38,9 +38,9 @@ const Form = () => {
       formState.message
 
     const config = {
-      SecureToken: 'a5af7959-c6ac-478f-ac4d-fe76997cb581',
-      To: 'stopinvasion59@gmail.com',
-      From: 'stopinvasion59@gmail.com',
+      SecureToken: '502c2030-2675-40bf-bf4d-eebf6f64e3cc',
+      To: 'contact@stopinvasion.fr',
+      From: 'contact@stopinvasion.fr',
       Subject: formState.subject,
       Body: body
     }
@@ -48,10 +48,21 @@ const Form = () => {
     // @ts-ignore
     if (window.Email) {
       // @ts-ignore
-      await window.Email.send(config).then(() =>
-        alert('email sent successfully')
-      )
-      navigate('/')
+      await window.Email.send(config)
+        .then(
+          () =>
+            toast({
+              title: 'Votre email a bien été envoyé !',
+              variant: 'success'
+            }),
+          setformState(initialValues)
+        )
+        .catch(() =>
+          toast({
+            title: `Une erreur s'est produite !`,
+            variant: 'destructive'
+          })
+        )
     }
   }
 
