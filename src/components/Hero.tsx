@@ -25,12 +25,12 @@ const Hero = () => {
           Le chimique ce n'est pas automatique
         </span>
         <div className='flex justify-between text-lg md:w-2/3'>
-          <Link
-            to='#booking'
+          <a
+            href='#booking'
             className='w-32 h-10 text-sm flex items-center justify-center bg-green-500 hover:bg-red-500 rounded p-2 px-6 text-white md:w-40'
           >
             Estimer
-          </Link>
+          </a>
 
           <Link
             to='/contact'
